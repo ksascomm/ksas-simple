@@ -1,0 +1,154 @@
+const { NoEmitOnErrorsPlugin } = require("webpack");
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: [
+            {
+              letterSpacing: "-0.03rem",
+              color: "#31261D",
+              lineHeight: "1.6",
+              fontSize: "1.25rem",
+              maxWidth: "100ch",
+              "--tw-prose-body": "#31261D",
+              "--tw-prose-bullets": "#31261D",
+              "--tw-prose-headings": "#31261D",
+              "--tw-prose-links": "#002d72",
+              "--tw-prose-bold": "#31261D",
+              "--tw-prose-code": "#31261D",
+              "--tw-prose-pre-code": "#31261D",
+              "--tw-prose-pre-bg": "#f8f8f8",
+              "--tw-prose-quotes": "#31261D",
+              "--tw-prose-counters": "31261D",
+              "ul > li::before": {
+                backgroundColor: "#31261D",
+              },
+              "ol > li::before": {
+                display: "none",
+                backgroundColor: "#fefefe",
+                color: "#31261D",
+              },
+              "ol > li": {
+                display: "list-item",
+              },
+              "ul > li": {
+                display: "list-item",
+              },
+              h1: {
+                marginBottom: "0rem",
+                fontSize: "2.25rem",
+                fontWeight: "700",
+                fontFamily: "hopkinsslab-bold, Georgia, serif",
+              },
+              "h3, h4, h5": {
+                marginTop: "0.5rem",
+                marginBottom: "0.5rem",
+                maxWidth: "66ch",
+                fontWeight: "700",
+                fontFamily:
+                  "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+              },
+              h2: {
+                fontSize: "2rem",
+                maxWidth: "55ch",
+                marginTop: "0.5rem",
+                marginBottom: "0.5rem",
+                fontWeight: "600",
+                fontFamily: "hopkinsslab-semibold, Georgia, serif",
+              },
+              h3: {
+                fontSize: "1.75rem",
+              },
+              h4: {
+                fontSize: "1.5rem",
+              },
+              p: {
+                marginTop: "1rem",
+                marginBottom: "1rem",
+                fontWeight: 400,
+              },
+              li: {
+                maxWidth: "90ch",
+                marginTop: "0rem",
+                marginBottom: ".25rem",
+                fontWeight: 400,
+              },
+              a: {
+                textDecoration: "none",
+                transition: "none",
+                fontWeight: 400,
+              },
+              strong: {
+                fontFamily:
+                  "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontWeight: 700,
+              },
+              b: {
+                fontFamily:
+                  "worksans-bold, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, sans-serif",
+                fontWeight: 700,
+              },
+              "a strong": {
+                color: "inherit",
+              },
+              table: {
+                fontSize: "1rem",
+                marginTop: ".5rem",
+                marginBottom: ".5rem",
+              },
+              thead: {
+                color: "#31261D",
+              },
+              img: {
+                marginTop: "1rem",
+                marginBottom: "1rem",
+              },
+              hr: {
+                marginTop: "1.25rem",
+                marginBottom: "1.25rem",
+                borderColor: "#bfccd9",
+              },
+              figure: {
+                marginTop: ".5rem",
+                marginBottom: ".5rem",
+              },
+              small: {
+                fontSize: "75%",
+              },
+              blockquote: {
+                fontStyle: "normal",
+                borderLeftColor: "#bfccd9",
+              },
+              "blockquote p:first-of-type::before": {
+                content: "none",
+              },
+            },
+          ],
+        },
+        lg: {
+          css: {
+            fontSize: "1.25rem",
+            maxWidth: "123ch",
+            h2: {
+              marginTop: "0.5rem",
+              marginBottom: "0.5rem",
+            },
+            h3: {
+              marginTop: "0.5rem",
+              marginBottom: "0.5rem",
+            },
+            img: {
+              marginTop: "0rem",
+              marginBottom: "0rem",
+            },
+            li: {
+              lineHeight: "1.6",
+            },
+          },
+        },
+      }),
+    },
+  },
+};

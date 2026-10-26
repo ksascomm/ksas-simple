@@ -1,0 +1,60 @@
+<?php
+/**
+ * The template for displaying 404 pages (not found)
+ *
+ * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ *
+ * @package KSAS_Simple
+ */
+
+get_header();
+?>
+
+	<main id="site-content" class="mx-auto prose site-main lg:prose-lg">
+		<?php
+		if ( function_exists( 'bcn_display' ) ) :
+			?>
+			<nav class="ml-6 wayfinding mb-8 xl:pl-0 lg:ml-16 2xl:ml-[2%]" aria-label="Breadcrumb Navigation">
+				<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+					<?php bcn_display(); ?>
+				</div>
+			</nav>
+		<?php endif; ?>
+		<section class="px-6 prose error-404 not-found">
+			<header class="page-header">
+				<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ksas-simple' ); ?></h1>
+			</header><!-- .page-header -->
+
+			<div class="page-content">
+				<p><?php esc_html_e( 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable', 'ksas-simple' ); ?></p>
+
+				<p><?php esc_html_e( 'Please try the following:', 'ksas-simple' ); ?></p>
+				<ul>
+					<li><?php esc_html_e( 'Check your spelling', 'ksas-simple' ); ?></li>
+					<li>
+						<?php
+						/* translators: %s: home page url */
+						$home_text = sprintf( __( 'Return to the <a href="%s">home page</a>', 'ksas-simple' ), esc_url( home_url( '/' ) ) );
+
+						echo wp_kses( $home_text, array( 'a' => array( 'href' => array() ) ) );
+						?>
+					</li>
+					<li>
+						<?php
+						/* translators: %s: The back link HTML */
+						$ksas_back_link = sprintf( __( 'Click the %s button', 'ksas-simple' ), '<a href="javascript:history.back()">Back</a>' );
+
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						echo $ksas_back_link;
+						?>
+					</li>
+					<li><?php esc_html_e( 'Use the search box in the menu', 'ksas-simple' ); ?></li>
+				</ul>
+
+			</div><!-- .page-content -->
+		</section><!-- .error-404 -->
+
+	</main><!-- #main -->
+
+<?php
+get_footer();
