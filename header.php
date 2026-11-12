@@ -52,7 +52,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								if (
 									$ksas_simple_description || is_customize_preview()
 								) :
-									echo '<span class="block pt-2 text-xl font-normal">' . $ksas_simple_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+									echo '<span class="block pt-2 text-xl">' . $ksas_simple_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 									?>
 								<?php endif; ?>
 									<?php bloginfo( 'name' ); ?>

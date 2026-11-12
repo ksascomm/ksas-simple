@@ -306,6 +306,14 @@ function ksas_enqueue_jhu_fonts() {
 		array(),
 		'1.0.0'
 	);
+
+	// Oswald.
+	wp_enqueue_style(
+		'jhu-oswald',
+		'https://assets.jhu.edu/fonts/latest/oswald/oswald.css',
+		array(),
+		'1.0.0'
+	);
 }
 add_action( 'wp_enqueue_scripts', 'ksas_enqueue_jhu_fonts' );
 
