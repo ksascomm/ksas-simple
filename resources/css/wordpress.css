@@ -158,6 +158,14 @@ label.gfield_label {
   @apply border-b-2 border-solid text-primary border-grey-darkest;
 }
 
+.widget a {
+	border-color: var(--color-primary);
+}
+
+.widget a:hover {
+	border-color: var(--color-primary) !important;
+}
+
 /* Fix issue were links are bolded, instead of links added to bold text*/
 .prose a strong {
 	border: 0px;
@@ -3353,17 +3361,23 @@ body:not(.enable-search-modal) .header-titles-wrapper {
   text-align: left;
 }
 
+/*.site-description,*/
 .site-title,
-.site-logo,
-.site-description {
+.site-logo
+ {
   margin: 0;
 }
 
 .site-title {
-font-family: var(--font-impact);
+  font-family: var(--font-impact);
   font-weight: var(--font-weight-bold);
   line-height: 1;
 }
+
+.site-title .site-description {
+font-weight: var(--font-weight-semibold);
+}
+
 
 .site-title a {
   display: block;
@@ -3382,7 +3396,7 @@ font-family: var(--font-impact);
 		max-width: 45ch;
 	}
 
-}*/
+}
 .site-description {
   margin-top: 1rem;
   color: #6d6d6d;
@@ -3392,6 +3406,7 @@ font-family: var(--font-impact);
   letter-spacing: -0.0311em;
   transition: all 0.15s linear;
 }
+*/
 
 .site-logo a,
 .site-logo img {
@@ -3428,7 +3443,7 @@ body:not(.enable-search-modal) .site-logo img {
   color: #fff;
 }
 
-.overlay-header .site-description,
+/*.overlay-header .site-description,*/
 .overlay-header .toggle {
   color: inherit;
 }
@@ -3968,10 +3983,11 @@ button.search-untoggle {
 
   /* Site Header --------------------------- */
 
+  /*
   .site-description {
     display: block;
   }
-
+	*/
   .site-logo img {
     max-height: 9rem;
     transition: height 0.15s linear, width 0.15s linear, max-height 0.15s linear;

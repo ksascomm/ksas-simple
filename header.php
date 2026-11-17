@@ -45,14 +45,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</a>
 					</div>
 					<div class="content-center mt-4 mb-12 lg:col-span-2 2xl:col-span-3 lg:mt-0 md:mb-0">
-						<h1 class="text-[2rem] site-title md:text-2xl lg:text-4xl ">
-							<a class="text-white hover:text-grey no-underline hover:underline! hover:underline-offset-2!" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<h1 class="text-[2rem] site-title md:text-2xl lg:text-[2.5rem] ">
+							<a class="text-white hover:text-grey no-underline hover:underline! hover:underline-offset-2! uppercase" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 								<?php
 									$ksas_simple_description = get_bloginfo( 'description', 'display' );
 								if (
 									$ksas_simple_description || is_customize_preview()
 								) :
-									echo '<span class="block pt-2 text-xl">' . $ksas_simple_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+									echo '<span class="block -mt-2.5 font-sans text-xl site-description font-weight-semibold">' . $ksas_simple_description . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 									?>
 								<?php endif; ?>
 									<?php bloginfo( 'name' ); ?>
